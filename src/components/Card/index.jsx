@@ -19,7 +19,7 @@ export default function Card(props) {
                             handleItens("-")
                         
                         }} >-</button>
-                        <p>{props.cachorro} itens</p>
+                            <p>{props.cachorro===0?"Adicionar item":props.cachorro===1?"1 Item":`${props.cachorro} Itens`}</p>
                         <button onClick={()=>{
                             handleItens("+")
                         }}>+</button>

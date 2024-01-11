@@ -19,7 +19,9 @@ function App() {
 
      <Card cachorro={itens} setItens2={setItens}/>
      <Card cachorro={itens2} setItens2={setItens2}/>
-     <Footer quente={total}/>
+     {total>0?<Footer quente={total}/>:null}
+     
+
       
     </>
   )
