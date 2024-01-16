@@ -1,4 +1,5 @@
-export default function Footer(props){console.log(props)
+export default function Footer(props){
+
     return(
         <footer className=" flex justify-between p-6 text-white fixed bottom-0 w-svw items-center  bg-primary" >
             <p>Total de itens</p>

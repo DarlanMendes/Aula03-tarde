@@ -9,21 +9,20 @@ import kebab from "./assets/kebab.png"
 function App() {
   
   
-  const [total, setTotal] = useState (0)
-
+  const [carrinho, setCarrinho] = useState ([])
+console.log(carrinho)
   
-
-  const products = [{id: "1",titulo: "sanduba", descricao: "Experimente nosso hambúrguer premium: carne suculenta, queijo derretido, vegetais frescos (alface, tomate, cebola roxa) e molho especial. Uma combinação perfeita de sabores e texturas em cada mordida.", figura: imagem}, {id: "2",titulo: "kebab", descricao: "Experimente nosso hambúrguer premium: carne suculenta, queijo derretido, vegetais frescos (alface, tomate, cebola roxa) e molho especial. Uma combinação perfeita de sabores e texturas em cada mordida.", figura: kebab}]
+  const products = [{id: "1",titulo: "sanduba", descricao: "Experimente nosso hambúrguer premium: carne suculenta, queijo derretido, vegetais frescos (alface, tomate, cebola roxa) e molho especial. Uma combinação perfeita de sabores e texturas em cada mordida.", figura: imagem}, 
+  {id: "2",titulo: "kebab", descricao: "Experimente nosso hambúrguer premium: carne suculenta, queijo derretido, vegetais frescos (alface, tomate, cebola roxa) e molho especial. Uma combinação perfeita de sabores e texturas em cada mordida.", figura: kebab}]
 
   return (
     <>
      <Header/>
     <div className="flex flex-col gap-5 items-center">
-    {products.map((product)=> (<Card  product={product}  setTotal={setTotal} key={product.id}/>))}    
+    {products.map((product)=> (<Card  product={product}  setCarrinho={setCarrinho} key={product.id}/>))}    
     </div>
-     {/* <Card cachorro={itens} setItens2={setItens}/>
-     <Card cachorro={itens2} setItens2={setItens2}/> */}
-     {total>0?<Footer quente={total}/>:null}
+    
+     {carrinho.length>0?<Footer carrinho={carrinho}/>:null}
      
 
       
